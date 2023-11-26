@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page title -->
+        <title>BeXpert: About Us</title>
+        <!-- link to css -->
+        <link rel="stylesheet" type="text/css" href="../css/AboutUs.css" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,900;1,300;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+            $('#nav_header').load('../header_footer/nav.html');
+            });
+            $(function(){
+                 $('#nav_footer').load('../header_footer/footer.html');
+             });
+        </script>
+    </head>
+
+    <body>
+        <!-- for nav -->
+    <nav>
+        <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+        <div id="nav_header"  style="width: 100%; height: 40px;"> </div>
+    </nav>
+    <section class="brandsection">
+    <!-- About Us page -->
+            <!-- BeXpert logo -->
+            <div>
+                <img src="../picture/BEX_logo.png" class="logo">
+            </div>
+            <header>
+                <h1 class="topicfont">ABOUT US</h1>
+            </header>
+            <!-- Text for About us-->
+        <article class="AboutUs">
+           <section class="abouttext">
+            BeXpert is both a talent and hiring manager center and an online portfolio platform where people can create portfolios to 
+            showcase their skills and advance their careers. It is a place where professionals can display their specialization and 
+            work in an organized manner. You can easily customize your portfolio with the different sections provided by our website 
+            (Bio, Skills, Education, Experience, Contact, and also your CV/ Resume) . Whether you're a freelancer looking for new 
+            opportunities, a recent graduate entering the job market, or an established professional looking to expand your network, 
+            our website can help you achieve your goals. Join us today and start showcasing your work to the world!
+           </section>
+        </article>
+    </section>
+        
+        
+        <!-- Title for Our team  -->
+        <header>
+            <h1 class="topicfont">OUR TEAM</h1>
+        </header>
+             
+        <!-- Table for member -->
+        <!-- INFO 1 (Navaluck)-->
+        <div class="div-responsive-table">
+        <article class="container" id="container"></article>
+
+        <!-- footer -->
+    <footer id="nav_footer" style="width: 100%;"></footer>
+    <script>
+        $(function () {
+          const boxexpert = $("#container");
+          boxexpert.html("");
+          fetch("http://localhost:3000/expert").then((res) => {
+            res.json().then((data) => {
+              if (data.success) {
+                for (let index = 0; index < 5; index++) {
+                  const expert = data.datas[index];
+                  const expertElement = document.createElement("article");
+                  expertElement.className = "column";
+                  expertElement.innerHTML = `
+                <div class="bannerimage" alt="Responsive image">
+                <img class="profile-picture" src="${expert.pic_link}" width="200" height="200">
+                </div>
+                <br>
+                <h4 class="desfontname">${expert.fname} ${expert.lname}</h4>
+                <a href = "mailto: ${expert.email}" class="desfontname">${expert.email}</a>
+                <section class="dummy_text desfont">
+                    ${expert.about}
+                </section>
+                </article>`;
+                  boxexpert.append(expertElement);
+                }
+              }
+            });
+          });
+        });
+      </script>
+    </body>
+</html>
+

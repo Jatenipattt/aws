@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- CSS. LINK-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/Serachbox.css" />
+    <link rel="stylesheet" href="HomePage.html" />
+    <title>Search The Expert!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#nav_header").load("../header_footer/nav.html");
+      });
+      $(function () {
+        $("#nav_footer").load("../header_footer/footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- for nav -->
+    <nav>
+      <!-- <iframe src="./nav.html" frameborder="0"></iframe>-->
+      <div id="nav_header" style="width: 100%; height: 40px"></div>
+    </nav>
+
+    <!-- the Search page part-->
+    <section class="brandsection">
+      <div>
+        <img
+          src="../picture/BEX_logo.png"
+          class="logo"
+          height="200px"
+          width="200px"
+        />
+      </div>
+    </section>
+
+    <div class="row mb-3">
+      <div class="col d-flex justify-content-center">
+        <div class="d-flex">
+          <select
+            class="form-select me-2"
+            id="search-option"
+            name="search_choice"
+            required
+          >
+            <option selected disabled value="">Filter by</option>
+            <option value="name">Name</option>
+            <option value="skills">Skills</option>
+            <option value="about">Bio</option>
+          </select>
+          <input
+            type="text"
+            class="form-control me-2"
+            placeholder="Search"
+            aria-label="Search"
+            name="filter"
+            id="filter"
+          />
+          <button class="btn btn-primary me-2" type="button" onclick="search()">
+            Search
+          </button>
+          <button
+            id="add-btn"
+            class="btn btn-secondary"
+            type="button"
+            onclick="addexpert()"
+          >
+            +
+          </button>
+          <!---  <button class="id btn-secondary" type="button">+</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- The Recommand Profile -->
+    <div class="recommendations-container" id="expert-wrapper"></div>
+
+    <div
+      class="modal fade"
+      id="conformDeleteModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Delete?</h5>
+          </div>
+          <div class="modal-body">
+            <p>Comfirm Delete Name: <span id="deleteName"></span> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal()"
+            >
+              cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="deleteExpert()"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- footer -->
+  <footer id="nav_footer" style="width: 100%"></footer>
+  <script type="text/javascript" src="../js/expert.js"></script>
+</html>

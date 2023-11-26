@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeXpert: Your Portfolio</title>
+    <!-- link to our css -->
+    <link rel="stylesheet" type="text/css" href="../css/management.css" />
+    <link rel="stylesheet" type="text/css" href="../css/experties.css" />
+    <!-- link to our scss -->
+    <link rel="stylesheet" href="../css/experties.scss" />
+    <!-- link to our js -->
+
+    <!-- Bootstrapcd here -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- nav + footer -->
+    <script>
+      $(function () {
+        $("#nav_header").load("../header_footer/nav.html");
+      });
+      $(function () {
+        $("#nav_footer").load("../header_footer/footer.html");
+      });
+    </script>
+    <!-- nav -->
+    <div id="nav_header"></div>
+
+    <!-- background band -->
+    <div class="bannerimage" alt="Responsive image" id="bannerimage">
+      <!-- product profile -->
+      <img
+        class="profile-picture"
+        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        alt="profile-picture"
+        id="pic_link"
+      />
+    </div>
+
+    <div class="management">
+      <!-- User's Name -->
+      <div>
+        <h1 id="fullname"></h1>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary" id="btn-cv-resume" type="button">
+            CV/Resume
+          </button>
+        </div>
+      </div>
+      <br />
+      <!-- for product management -->
+      <div class="login">
+        <div class="form-group was-validated">
+          <!-- Bio -->
+          <label class="form-label" for="text">My Bio</label>
+          <div id="about"></div>
+
+          <!-- License -->
+          <br /><br />
+          <label class="form-label" for="text">License</label>
+          <div id="license"></div>
+
+          <br /><br />
+          <!-- Education -->
+          <label class="form-label" for="text">My Education</label>
+
+          <!-- buttons for education -->
+          <div class="accordion accordion-flush" id="accordionFlushEducation">
+            <div class="accordion-item">
+              <h2
+                class="accordion-header"
+                id="flush-headingUniversityEducation"
+              >
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseUniversityEducation"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseUniversityEducation"
+                >
+                  University
+                </button>
+              </h2>
+              <div
+                id="flush-collapseUniversityEducation"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingUniversityEducation"
+                data-bs-parent="#accordionFlushEducation"
+              >
+                <div class="accordion-body" id="edu_uni"></div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSchoolEducation">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSchoolEducation"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSchoolEducation"
+                >
+                  High School
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSchoolEducation"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingSchoolEducation"
+                data-bs-parent="#accordionFlushEducation"
+              >
+                <div class="accordion-body" id="edu_highschool"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <br /><br />
+          <label class="form-label" for="text">My Skills</label>
+          <div class="div-responsive-table">
+            <table class="table table table-hover" id="table">
+              <tr>
+                <th>#</th>
+                <th>Soft Skills</th>
+                <th>Business Area</th>
+                <th>Computer Area</th>
+                <th>Art Area</th>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Contact -->
+          <br /><br />
+          <label class="form-label" for="text">Contact Me</label>
+          <br />
+          <a
+            id="linkedin-href"
+            class="a-contact-style"
+            href="https://www.linkedin.com/in/phawida-phungchuen"
+            ><img
+              class="contact_icon"
+              src="https://cdn-icons-png.flaticon.com/512/179/179330.png" />
+            <span id="linkedin"></span
+          ></a>
+          <br />
+          <a class="a-contact-style" href="mailto: phawidabery@gmail.com"
+            ><img
+              height="40px"
+              class="contact_icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/800px-Circle-icons-mail.svg.png" />
+            <span id="email"></span
+          ></a>
+          <br />
+          <a class="a-contact-style" href="tel: 0832914888"
+            ><img
+              height="40px"
+              class="contact_icon"
+              src="https://freesvg.org/img/phone-call-icon.png" />
+            <span id="mobile_num"></span
+          ></a>
+
+          <!-- to product management -->
+          <br /><br />
+          <a href="/product_management/" id="edit"
+            ><button type="submit" class="btn btn-primary">Edit</button></a
+          >
+          <button type="reset" class="btn btn-primary" onclick="cancel() ">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="nav_footer" style="width: 100%"></footer>
+    <script src="../js/expoert-detail.js"></script>
+  </body>
+</html>

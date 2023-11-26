@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeXpert: Your Portfolio</title>
+    <!-- link to our css -->
+    <link rel="stylesheet" type="text/css" href="../css/management.css" />
+    <link rel="stylesheet" type="text/css" href="../css/experties.css" />
+    <!-- link to our scss -->
+    <link rel="stylesheet" href="../css/experties.scss" />
+    <!-- link to our js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Bootstrapcd here -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+  </head>
+  <body>
+    <!-- nav + footer -->
+    <script>
+      $(function () {
+        $("#nav_header").load("../header_footer/nav.html");
+      });
+      $(function () {
+        $("#nav_footer").load("../header_footer/footer.html");
+      });
+    </script>
+    <!-- nav -->
+    <nav>
+      <div id="nav_header"></div>
+    </nav>
+
+    <!-- background band -->
+    <div class="bannerimage" alt="Responsive image">
+      <!-- product profile -->
+      <img
+        class="profile-picture"
+        src="https://i1.sndcdn.com/artworks-000810672895-5vv94q-t500x500.jpg"
+        alt="profile-picture"
+        id="profile"
+      />
+    </div>
+
+    <div class="management">
+      <h2>Add Experty Information</h2>
+      <br />
+
+      <!-- for product management -->
+      <form id="form_id" onsubmit="postData()">
+        <div class="login">
+          <div class="form-group">
+            <!-- Firstname -->
+            <label class="form-label" for="text">Picture Profile Link</label>
+            <!-- edit -->
+            <input
+              class="form-control"
+              type="text"
+              id="pic_link"
+              name="pic_link"
+              required
+            />
+            <br />
+            <!-- Firstname -->
+            <label class="form-label" for="text">Background link</label>
+            <!-- edit -->
+            <input
+              class="form-control"
+              type="text"
+              id="bg_link"
+              name="bg_link"
+              required
+            />
+            <br /><br />
+            <!-- Firstname -->
+            <label class="form-label" for="text">Firstname</label>
+            <!-- edit -->
+            <input
+              class="form-control"
+              type="text"
+              id="firstname"
+              name="firstname"
+              required
+            />
+            <br />
+            <!-- Lastname -->
+            <label class="form-label" for="text">Lastname</label>
+            <!-- edit -->
+            <input
+              class="form-control"
+              type="text"
+              id="lastname"
+              name="lastname"
+              required
+            />
+            <br /><br />
+            <!-- Bio -->
+            <label class="form-label" for="text">My Bio</label>
+            <!-- edit -->
+            <textarea
+              placeholder="Tell everyone about you..."
+              class="form-control"
+              type="text"
+              id="about"
+              name="about"
+              required
+            ></textarea>
+
+            <!-- Experience -->
+            <br /><br />
+            <label class="form-label" for="text">License</label>
+            <input
+              class="form-control"
+              type="text"
+              id="lecense"
+              name="lecense"
+            />
+            <!-- Education -->
+            <br /><br />
+            <label class="form-label" for="education-text">My Education</label>
+
+            <!-- buttons for education -->
+            <div class="accordion accordion-flush" id="accordionFlushEducation">
+              <div class="accordion-item">
+                <h2
+                  class="accordion-header"
+                  id="flush-headingUniversityEducation"
+                >
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseUniversityEducation"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseUniversityEducation"
+                  >
+                    University
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseUniversityEducation"
+                  class="accordion-collapse active"
+                  aria-labelledby="flush-headingUniversityEducation"
+                  data-bs-parent="#accordionFlushEducation"
+                >
+                  <div class="accordion-body">
+                    <!-- edit -->
+                    <textarea
+                      placeholder="Education University"
+                      class="form-control"
+                      id="edu_uni"
+                      name="edu_uni"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSchoolEducation">
+                  <button
+                    class="accordion-button active"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSchoolEducation"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSchoolEducation"
+                  >
+                    High School
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseSchoolEducation"
+                  class="accordion-collapse active"
+                  aria-labelledby="flush-headingSchoolEducation"
+                  data-bs-parent="#accordionFlushEducation"
+                >
+                  <div class="accordion-body">
+                    <!-- edit -->
+                    <textarea
+                      placeholder="Education High School"
+                      class="form-control"
+                      id="edu_highschool"
+                      name="edu_highschool"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <br /><br />
+            <label class="form-label" for="text">My Skills</label>
+            <div class="div-responsive-table">
+              <table class="table table table-hover">
+                <tr>
+                  <th>#</th>
+                  <th>Soft Skills</th>
+                  <th>Business Area</th>
+                  <th>Computer Area</th>
+                  <th>Data Area</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      id="soft-skill1"
+                      name="soft-skill1"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      id="business-area1"
+                      name="business-area1"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      id="computer-area1"
+                      name="computer-area1"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      id="art-area1"
+                      name="art-area1"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="soft-skill2"
+                      name="soft-skill2"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="business-area2"
+                      name="business-area2"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="computer-area2"
+                      name="computer-area2"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="art-area2"
+                      name="art-area2"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="soft-skill3"
+                      name="soft-skill3"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="business-area3"
+                      name="business-area3"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="computer-area3"
+                      name="computer-area3"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="art-area3"
+                      name="art-area3"
+                    />
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Contact -->
+            <br /><br />
+            <label class="form-label" for="text">Contact Me</label>
+            <br />
+            <img
+              class="contact_icon"
+              src="https://cdn-icons-png.flaticon.com/512/179/179330.png"
+            />
+            LinkedIn
+            <input
+              type="text"
+              class="form-control contact"
+              id="linkedin"
+              name="linkedin"
+              required
+            />
+            <br />
+            <img
+              height="40px"
+              class="contact_icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Circle-icons-mail.svg/800px-Circle-icons-mail.svg.png"
+            />
+            Email
+            <input
+              type="email"
+              class="form-control contact"
+              id="email"
+              name="email"
+              required
+            />
+            <br />
+            <img
+              height="40px"
+              class="contact_icon"
+              src="https://freesvg.org/img/phone-call-icon.png"
+            />
+            Phone Number
+            <input
+              type="number"
+              class="form-control contact"
+              id="mobile_num"
+              name="mobile_num"
+              minlength="10"
+              maxlength="10"
+              required
+            />
+
+            <!-- save and reset -->
+            <br /><br />
+            <button type="button" class="btn btn-success" onclick="postData()">
+              Save
+            </button>
+            <button type="reset" class="btn btn-primary" onclick="cancel()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer id="nav_footer" style="width: 100%"></footer>
+    <script src="../js/profile-management.js"></script>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 801px) {
+
+    /* .sectionindex {
+        padding: 40px;
+        background-image: url("../picture/indexsectionpic.jpg");
+    } */
+
+    /* about and description section */
+    /* .container {
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    } */
+    
+    /* .column {
+        padding: 2%;
+        margin: 1%;
+        border-radius: 20px;
+        background-color:#255C8C;
+    } */
+    /* ----------------------------- */
+
+    .brandsection {
+        font-family: 'Roboto', sans-serif;
+        background-image: linear-gradient(#255C8C , aliceblue);
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 500px;
+        width: 500px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .section1 {
+        background-image: linear-gradient(to right, #255C8C , aliceblue);
+    }
+    
+    .section2 {
+        background-image: linear-gradient(to right, aliceblue , #255C8C);
+    }
+
+    .section3 {
+        background-color: #255C8C;
+    }
+    
+    .topicfont1 {
+        color: aliceblue;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+    }
+    
+    .descriptionfont1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 90px;
+        padding-right: 190px;
+    }
+    
+    .topicfont2 {
+        color: #255C8C;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+    }
+    
+    .descriptionfont2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 90px;
+        padding-right: 190px;
+    }
+
+    .topicfont3 {
+        color: aliceblue;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    /* button decor */
+    .borderbutton {
+        font-family: 'Open Sans', sans-serif;
+        border-color: aliceblue;
+        border-width: 2px;
+        border-style: solid;
+        /* border-radius: 8px; */
+        margin: auto;
+        padding: 10px;
+        color: #255C8C;
+        text-decoration: none;
+        background-color: aliceblue;
+    }
+    /* ---------- */
+
+    /* image size */
+    .imsize{
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    /* textsize */
+    /* .text {
+        font-size: 100%;
+        color: aliceblue;
+    } */
+
+    /* topic color */
+    .topic {
+        font-family: 'Roboto', sans-serif;
+        color: aliceblue;
+    }
+
+    /* image flex */
+    .improfile {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    /* expertise section */
+    .expertisecontainer {
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #255C8C;
+    }
+
+    .expertisecolumn {
+        padding: 2%;
+        margin: 1%;
+        border-radius: 20px;
+        background-color:aliceblue;
+        font-family: 'Open Sans', sans-serif;
+    }
+    /* ---------------- */
+
+    /* class button */
+    .btn.btn-primary {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* name port align */
+    .card-title {
+        text-align: center;
+    }
+}
+
+/* for phones and tablets */
+@media only screen and (max-width: 800px) {
+
+    /* .sectionindex {
+        padding: 40px;
+        background-image: url("../picture/indexsectionpic.jpg");
+    } */
+
+    /* about and description section */
+    /* .container {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .column {
+        padding: 2%;
+        margin: 2%;
+        border-radius: 10px;
+        background-color:#255C8C;
+    } */
+    /* ----------------------------- */
+
+    .brandsection {
+        background-image: linear-gradient(#255C8C , aliceblue);
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 300px;
+        width: 300px;
+        margin-top: 100px;
+        margin-bottom: 200px;
+    }
+
+    .section1 {
+        background-image: linear-gradient(to right, #255C8C , aliceblue);
+    }
+    
+    .section2 {
+        background-image: linear-gradient(to right, aliceblue , #255C8C);
+    }
+
+    .section3 {
+        background-color: #255C8C;
+    }
+    
+    .topicfont1 {
+        color: aliceblue;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+    }
+    
+    .descriptionfont1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 40px;
+        padding-right: 140px;
+    }
+    
+    .topicfont2 {
+        color: #255C8C;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+    }
+    
+    .descriptionfont2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: black;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 40px;
+        padding-right: 140px;
+    }
+
+    .topicfont3 {
+        color: aliceblue;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    /* button decor */
+    .borderbutton {
+        font-family: 'Open Sans', sans-serif;
+        border-color: aliceblue;
+        border-width: 2px;
+        border-style: solid;
+        /* border-radius: 8px; */
+        margin: auto;
+        padding: 10px;
+        color: #255C8C;
+        text-decoration: none;
+        background-color: aliceblue;
+    }
+
+
+    /* image size */
+    .imsize{
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    /* textsize */
+    .text {
+        font-size: 100%;
+        color: aliceblue;
+    }
+
+    /* topic color */
+    .topic {
+        color: aliceblue;
+    }
+
+    /* image flex */
+    .improfile {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    /* expertise section */
+    .expertisecontainer {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #255C8C;
+    }
+
+    .expertisecolumn {
+        padding: 2%;
+        margin: 1%;
+        border-radius: 20px;
+        background-color:aliceblue;
+    }
+    /* ---------------- */
+
+    /* class button */
+    .btn.btn-primary {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* name port align */
+    .card-title {
+        text-align: center;
+    }
+}
